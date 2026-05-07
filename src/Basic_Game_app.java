@@ -9,11 +9,16 @@ public Dealer john;
     public Basic_Game_app()
     {
         deck = new Card[52];
-        for(int x = 0; x< deck.length/4; x++)
+        for(int x = 0; x<deck.length; x++)
+        {
+            deck[x] = new Card("Spades", 10, x);
+            deck[x].Printinfo();
+        }
+       /*/ for(int x = 0; x< deck.length/4; x++)
         {
             int value;
             if(x<10){
-                value = x;
+                value = x+1;
             } else if (x<13) {
                 value = 10;
             }
@@ -25,7 +30,7 @@ public Dealer john;
         {
             int value;
             if(x<23){
-                value = x;
+                value = x-13;
             } else if (x<26) {
                 value = 10;
             }
@@ -39,7 +44,7 @@ public Dealer john;
         {
             int value;
             if(x<36){
-                value = x;
+                value = x-26;
             } else if (x<39) {
                 value = 10;
             }
@@ -51,7 +56,7 @@ public Dealer john;
         {
             int value;
             if(x<49){
-                value = x;
+                value = x-39;
             } else if (x<52) {
                 value = 10;
             }
@@ -60,13 +65,13 @@ public Dealer john;
             deck[x] = new Card("Heart", value, "john");
         }
         int rand = (int)(Math.random()*52);
-        System.out.println(deck[rand].Name);
-        System.out.println(deck[rand].Value);
-        System.out.println(deck[rand].Suit);
+
         System.out.println(rand);
 
         me = new Player();
         john = new Dealer();
+
+        */
     }
     public void Round()
     {
