@@ -12,27 +12,31 @@ public class Card {
             Name = "Ace";
             Value = 11;
         }
-        if(pName == 11)
+        if(pName == 10)
         {
             Name = "Jack";
             Value = 10;
         }
-        if(pName == 12)
+        if(pName == 11)
         {
             Name = "Queen";
             Value = 10;
 
         }
-        if(pName == 13)
+        if(pName == 12)
         {
             Name = "King";
             Value = 10;
 
         }
 
+        if(pName >0&& pName <10)
+        { int num = pName+1;
+            Name = ""+num;
+        Value = num;}
 
 
-        {Name = "2";}
+
         Suit = pSuit;
     }
     public void Printinfo()
