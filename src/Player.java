@@ -9,6 +9,8 @@ public class Player {
     isBust = false;
     name = "Player";
     isHit = true;
+    hand = new Card[2];
+
     }
     public void hit()
     {

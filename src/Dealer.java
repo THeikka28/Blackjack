@@ -6,6 +6,7 @@ public class Dealer {
     {
         Cardtotal = 0;
         isOver15 = false;
+        hand = new Card[2];
     }
     public void hit(){}
     public void stay(){}
