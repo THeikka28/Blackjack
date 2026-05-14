@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class Basic_Game_app {
 public Card[] deck;
 public Player me;
@@ -39,14 +42,26 @@ public Dealer john;
 
         }
         System.out.println();
-
-        deck[0].Printinfo();
-        deck[13].Printinfo();
-        deck[26].Printinfo();
-        deck[39].Printinfo();
-
         Shuffle();
-        deck[1].Printinfo();
+        me = new Player();
+        john = new Dealer();
+        // give the cards to the dealer/player
+        me.hand[0] = deck[0];
+        me.hand[1] = deck[1];
+        john.hand[0] = deck[2];
+        john.hand[1] = deck[3];
+       // ask the user questions
+        printDeck();
+        me.Calculatetotal();
+        john.Calculatetotal();
+        Scanner s = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = s.nextLine();
+        me.name = name;
+        me.printinfo();
+        john.printinfo();
+
+
 
     }
     public void Round()
@@ -66,5 +81,12 @@ public Dealer john;
     public void Compare()
     {
 
+    }
+    public void printDeck()
+    {
+        for(int j=0; j< deck.length; j++)
+        {
+            deck[j].Printinfo();
+        }
     }
 }
