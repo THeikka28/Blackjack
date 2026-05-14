@@ -4,6 +4,12 @@ public class Player {
     public boolean isHit;
     public Card[] hand;
     public String name;
+    public Player()
+    {
+    isBust = false;
+    name = "Player";
+    isHit = true;
+    }
     public void hit()
     {
 
